@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gareti <gareti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 12:23:43 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/08/09 14:29:23 by rgareti-         ###   ########.fr       */
+/*   Updated: 2025/08/10 21:45:11 by gareti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printf(const char *format, ...)
 		return (-1);
 	printed = 0;
 	va_start(args, format);
-	printed += parse_format(format, args);
+	printed += ft_parse(format, args);
 	va_end(args);
 	return (printed);
 }
