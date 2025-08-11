@@ -6,7 +6,7 @@
 /*   By: gareti <gareti@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 18:31:50 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/08/10 21:46:45 by gareti           ###   ########.fr       */
+/*   Updated: 2025/08/10 22:24:50 by gareti           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	ft_handle_specifier(char specifier, va_list args)
 		return (ft_print_char(args));
 	if (specifier == 'd' || specifier == 'i')
 		return (ft_print_nbr(args));
-/*	if (specifier == 's')
-		return (print_str(args));
-	if (specifier == 'x' || specifier == 'X')
+	if (specifier == 's')
+		return (ft_print_str(args));
+/*	if (specifier == 'x' || specifier == 'X')
 		return (convert_hex_to_str(args, specifier));
 	if (specifier == 'u')
 		return (convert_unsigned_to_str(args));
