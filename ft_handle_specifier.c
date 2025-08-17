@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_handle_specifier.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gareti <gareti@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rgareti- <rgareti-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 18:31:50 by rgareti-          #+#    #+#             */
-/*   Updated: 2025/08/14 19:16:29 by gareti           ###   ########.fr       */
+/*   Updated: 2025/08/17 18:06:02 by rgareti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ int	ft_handle_specifier(char specifier, va_list args)
 		return (ft_print_unsigned(args));
 	if (specifier == '%')
 		return (write(1, "%", 1));
-/*	if (specifier == 'p')
-		return (convert_ptr_to_str(args));*/
+	if (specifier == 'p')
+		return (ft_print_ptr(args));
 	return (write(1, "%", 1));
-
 }
-
